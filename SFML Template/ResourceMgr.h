@@ -1,7 +1,6 @@
 #pragma once
-#include"Singleton.h"
-#include <unordered_map>
-#include <string>
+#include "stdafx.h"
+
 template<typename T> 
 class ResourceMgr : public Singleton<ResourceMgr<T>>
 {

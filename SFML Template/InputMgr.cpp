@@ -1,4 +1,4 @@
-#include "InputMgr.h"
+#include "stdafx.h"
 std::list<sf::Keyboard::Key> InputMgr::keyDownList;
 std::list<sf::Keyboard::Key> InputMgr::keyHeldList;
 std::list<sf::Keyboard::Key> InputMgr::keyUpList;
