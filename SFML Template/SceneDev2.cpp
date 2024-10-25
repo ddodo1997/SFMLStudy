@@ -10,11 +10,11 @@ SceneDev2::SceneDev2()
 void SceneDev2::Init()
 {
 	std::cout << "SceneDev2::Init()" << std::endl;
-	GameObject* player = AddGo(new SpriteGo("graphics/player.png"));
+	SpriteGo* player = AddGo(new SpriteGo("graphics/player.png"));
 	player->SetOrigin(Origins::MC);
 	player->SetPosition({ 1920 / 2,1080 / 2 });
 
-	GameObject* text = AddGo(new TextGo("fonts/KOMIKAP_.ttf"));
+	TextGo* text = AddGo(new TextGo("fonts/KOMIKAP_.ttf"));
 	text->SetOrigin(Origins::TL);
 	text->SetPosition({ 0.f,0.f });
 	text->SetString("Dev2");

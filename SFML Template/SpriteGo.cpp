@@ -37,3 +37,9 @@ void SpriteGo::SetOrigin(Origins preset)
 	originPreset = preset;
 	origin = Utils::SetOrigin(sprite, preset);
 }
+
+void SpriteGo::SetScale(float x, float y)
+{
+	GameObject::SetScale(x, y);
+	sprite.setScale(x, y);
+}
