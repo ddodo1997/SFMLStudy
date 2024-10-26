@@ -2,21 +2,24 @@
 #include "BeeGo.h"
 
 BeeGo::BeeGo(std::string texId, std::string name)
-	:SpriteGo(texId,name), rangeXSpeed(500.f, 700.f), rangeYSpeed(-700.f, -500.f)
+	:SpriteGo(texId, name), rangeXSpeed(500.f, 700.f), rangeYSpeed(-700.f, -500.f), rangeScale(1.f, 2.f)
 {
 }
 
 void BeeGo::Reset()
 {
 	SpriteGo::Reset();
+	float scale = Utils::RandomRange(rangeScale.x,rangeScale.y);
 	if (Utils::RandomRange(0, 1))
 	{
 		speed.x = Utils::RandomRange(rangeXSpeed.x, rangeXSpeed.y);
 		SetPosition({ xBounds.x, Utils::RandomRange(yBounds.x, yBounds.y)});
+		SetScale(-scale, scale);
 	}
 	else {
 		speed.x = Utils::RandomRange(rangeYSpeed.x, rangeYSpeed.y);
 		SetPosition({ xBounds.y, Utils::RandomRange(yBounds.x, yBounds.y) });
+		SetScale(scale, scale);
 	}
 }
 

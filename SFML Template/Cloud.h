@@ -18,11 +18,8 @@ public:
     ~Cloud() = default;
 
     void SetRangeSpeed(const sf::Vector2f& speed) { this->rangeSpeed = speed; }
-    void SetBounds(const sf::Vector2f& xBounds, const sf::Vector2f& yBounds)
-    {
-        this->xBounds = xBounds;
-        this->yBounds = yBounds;
-    }
+    void SetXBounds(const sf::Vector2f& xBounds) { this->xBounds = xBounds; }
+    void SetYBounds(const sf::Vector2f& yBounds) { this->yBounds = yBounds; }
     void SetRangeScale(const sf::Vector2f& rangeScale) { this->rangeScale = rangeScale; }
     void Reset()override;
     void Update(float dt)override;

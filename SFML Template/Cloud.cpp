@@ -9,20 +9,20 @@ Cloud::Cloud(const std::string& texId, const std::string& name)
 void Cloud::Reset()
 {
 	SpriteGo::Reset();
+	float scale = Utils::RandomRange(rangeScale.x, rangeScale.y);
+
 	if (Utils::RandomRange(0,1))
 	{
 		speed.x = Utils::RandomRange(rangeSpeed.x, rangeSpeed.y);
 		SetPosition({ xBounds.x, Utils::RandomRange(yBounds.x, yBounds.y) });
+		SetScale(-scale, scale);
 	}
 	else
 	{
 		speed.x = Utils::RandomRange(rangeYSpeed.x,rangeYSpeed.y);
 		SetPosition({ xBounds.y, Utils::RandomRange(yBounds.x, yBounds.y)});
+		SetScale(scale, scale);
 	}
-
-
-	float scale = Utils::RandomRange(rangeScale.x, rangeScale.y);
-	SetScale(scale, scale);
 
 	SetOrigin(Origins::MC);
 

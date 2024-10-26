@@ -24,8 +24,8 @@ void SceneDev1::Init()
 	for (int i = 0; i < 3; i++)
 	{
 		Cloud* cloud = AddGo(new Cloud("graphics/cloud.png"));
-		cloud->SetBounds({ -100.f, 2000.f }, {0.f, 500.f});
-		cloud->SetPosition({ 0.f, 300.f });
+		cloud->SetXBounds({ -100.f, 2000.f });
+		cloud->SetYBounds({ 0.f, 500.f });
 	}
 	for (int i = 0; i < 3; i++)
 	{
